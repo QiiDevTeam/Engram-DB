@@ -1,0 +1,18 @@
+# Rust / Cargo
+/target/
+Cargo.lock
+**/*.rs.bk
+*.pdb
+
+# IDE / OS
+.vscode/
+.idea/
+.vs/
+.DS_Store
+Thumbs.db
+*.log
+
+# Test artefacts
+/memory/
+/memory-*/
+./memory/

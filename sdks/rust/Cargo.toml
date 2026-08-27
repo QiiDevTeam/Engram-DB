@@ -1,0 +1,18 @@
+[package]
+name = "engram"
+description = "EngramDB Rust SDK: AI long-term memory vector database"
+version = "0.2.0"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://github.com/engramdb/engram"
+keywords = ["vector-database", "ai", "memory", "rag", "embedding"]
+categories = ["database"]
+readme = "README.md"
+
+[dependencies]
+# -- 独立仓库说明 --
+# Monorepo 模式（本仓库根的 workspace）：直接使用本地 path。
+# 单独克隆本 SDK（独立 Git 仓库）时：
+#   已发布到 crates.io：删除 `path = ...` 仅保留 `version = "0.2.0"`，cargo 会从 registry 拉取。
+#   未发布或想跟随主分支：改为 `engram-db = { git = "https://github.com/engramdb/engram", branch = "main" }`
+engram-db = { version = "0.2.0", path = "../../db" }

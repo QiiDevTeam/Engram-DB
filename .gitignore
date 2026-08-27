@@ -1,0 +1,77 @@
+# Rust / Cargo
+/target/
+**/target/
+Cargo.lock
+**/*.rs.bk
+*.pdb
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+*.pyo
+.venv/
+venv/
+env/
+.env
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+.maturin/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+
+# C++ / CMake
+build/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.lib
+*.exe
+*.out
+.vs/
+.vscode/
+.idea/
+*.swp
+*~
+
+# Go
+vendor/
+bin/
+*.test
+*.out
+go.sum
+
+# Database / runtime artefacts
+/memory/
+./memory/
+./data/
+./data-*/
+*.db
+*.wal
+*.snapshot
+*.archived
+/export.jsonl
+/backup/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.temp
+.env.local

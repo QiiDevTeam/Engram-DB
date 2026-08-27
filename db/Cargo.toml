@@ -1,0 +1,27 @@
+[package]
+name = "engram-db"
+description = "EngramDB database engine: AI long-term memory vector database (core)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "engram_db"
+path = "src/lib.rs"
+crate-type = ["rlib", "cdylib", "staticlib"]
+
+[features]
+default = ["capi"]
+# Exposes the stable C ABI (engram.h) in the cdylib/staticlib artifacts.
+capi = []
+# CUDA runtime loading support (graceful no-op when engram_gpu.dll is absent)
+gpu = []
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "1"
+
+[[bin]]
+name = "engram-server"
+path = "src/bin/engram-server.rs"

@@ -1,0 +1,32 @@
+[build-system]
+requires = ["maturin>=1.5,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "engramdb"
+version = "0.2.0"
+requires-python = ">=3.8"
+description = "EngramDB Python bindings: AI long-term memory vector database"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [{ name = "EngramDB Contributors" }]
+maintainers = [{ name = "EngramDB Contributors" }]
+keywords = ["vector-database", "ai", "memory", "rag"]
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Database",
+    "License :: OSI Approved :: Apache Software License",
+    "Development Status :: 4 - Beta",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/engramdb/engram"
+Repository = "https://github.com/engramdb/engram"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+module-name = "engram"
+bindings = "pyo3"
+manifest-path = "Cargo.toml"

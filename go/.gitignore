@@ -1,0 +1,19 @@
+# Go
+vendor/
+bin/
+*.exe
+*.test
+*.out
+go.sum
+*.log
+
+# IDE / OS
+.vscode/
+.idea/
+.vs/
+.DS_Store
+Thumbs.db
+
+# Test runtime
+/tmp/
+./data/

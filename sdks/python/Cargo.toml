@@ -1,0 +1,21 @@
+[package]
+name = "engram-python"
+description = "Python bindings for EngramDB"
+version = "0.2.0"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://github.com/engramdb/engram"
+keywords = ["vector-database", "ai", "memory", "rag"]
+categories = ["database"]
+readme = "README.md"
+
+[lib]
+name = "engram"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+# -- 独立仓库说明 --
+# Monorepo：使用本地 path。独立克隆本 SDK 时：
+#   已发布：删掉 path 仅保留 version；未发布：改为 git = "https://github.com/engramdb/engram"
+engram-db = { version = "0.2.0", path = "../../db" }
+pyo3 = { version = "0.22", features = ["extension-module"] }
